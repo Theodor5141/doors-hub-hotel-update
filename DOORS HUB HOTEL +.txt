@@ -1,0 +1,88 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("DOORS HUB BY ANWHERE GAMER VERSION 1.0", "Ocean")
+
+--MAIN
+local Tab = Window:NewTab("Main")
+
+local Section = Tab:NewSection("No Key System")
+
+ Section:NewButton("Discord", "#1 Script For Doors", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+end)
+
+Section:NewButton("Vynixius Hub", "#1 Script For Doors", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+end)
+
+Section:NewButton("Poop Doors (Hotel + Update)", "Has More Function than Vynixius Doors", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/zoophiliaphobic/POOPDOORS/main/script.lua'))()
+end)
+
+local Section = Tab:NewSection("With Key System")
+
+Section:NewButton("Statue Hub", "Requires Key", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/toosiwhip/StatueV2/main/statuev2doors.lua"))()
+end)
+
+local Tab = Window:NewTab("Miscellaneous")
+
+local Section = Tab:NewSection("LocalPlayer")
+
+Section:NewSlider("Walkspeed(Patched)", "Increases/Decreases Player Walkspeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("JumpHeight(Patched)", "Increases/Decreases Player JumpHeight", 350, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local Section = Tab:NewSection("Fun")
+
+Section:NewButton("Yummy Burger", "Gives You Burger", function()
+    local Item = game:GetObjects("rbxassetid://100522628")[1] Item.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+Section:NewButton("Screech Plushie", "Give You Screech In Hands", function()
+    loadstring(game:HttpGet("https://pastefy.ga/cMz6DDWC/raw"))() 
+end)
+
+Section:NewButton("Crucifix", "Give You Crucifix", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/Doors/Crucifix.lua"))() 
+end)
+
+local Section = Tab:NewSection("Something New And Enjoyment")
+
+Section:NewButton("Impossible Mode", "New Entities", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/XJtn8QhX'))()
+end)
+
+Section:NewButton("NoClip", "Makes You Go Through Walls", function()
+    local Noclip = nil
+local Clip = nil
+
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
+noclip() -- to toggle noclip() and clip()
+end)
+
+Section:NewButton("COMING SOON", "More Features Coming Soon", function()
+end)
+
