@@ -6,10 +6,6 @@ local Tab = Window:NewTab("Main")
 
 local Section = Tab:NewSection("No Key System")
 
- Section:NewButton("Discord", "#1 Script For Doors", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
-end)
-
 Section:NewButton("Vynixius Hub", "#1 Script For Doors", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
 end)
